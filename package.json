@@ -16,7 +16,9 @@
   "sideEffects": false,
   "scripts": {
     "build": "webpack -p --config config/prod.js",
-    "start": "webpack-dev-server --config config/dev.js"
+    "start": "webpack-dev-server --config config/dev.js",
+    "pitchdeck": "node scripts/generate-pitchdeck.js",
+    "pitchdeck:custom": "node scripts/generate-pitchdeck.js --output custom-deck.pptx --title"
   },
   "dependencies": {
     "@brunoimbrizi/controlkit": "^0.1.93",
@@ -41,8 +43,9 @@
     "glslify-import-loader": "^0.1.2",
     "glslify-loader": "^1.0.2",
     "html-webpack-plugin": "^3.2.0",
-    "js-yaml": ">=3.13.1",
     "imports-loader": "^0.8.0",
+    "js-yaml": ">=3.13.1",
+    "pptxgenjs": "^4.0.1",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.21.0",
     "webpack": "^4.15.1",
